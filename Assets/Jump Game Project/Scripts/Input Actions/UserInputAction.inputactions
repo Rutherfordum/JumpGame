@@ -1,0 +1,60 @@
+{
+    "name": "UserInputAction",
+    "maps": [
+        {
+            "name": "PlayerSwipe",
+            "id": "7e784161-9ada-47ad-816c-7bd213e8b6ef",
+            "actions": [
+                {
+                    "name": "TouchPosition",
+                    "type": "PassThrough",
+                    "id": "27befc67-7afc-4867-b1d9-86bbdbed3182",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TouchPress",
+                    "type": "Button",
+                    "id": "8b8bfd7b-c552-4d59-bbbf-e9ad02ea3c9b",
+                    "expectedControlType": "Button",
+                    "processors": "Clamp",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "dc5efa8a-a359-4fdc-afcc-4c71385c1915",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "UserInput",
+                    "action": "TouchPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4e7d6f50-a943-4be1-b9c2-954cad5f1809",
+                    "path": "<Pointer>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "UserInput",
+                    "action": "TouchPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "UserInput",
+            "bindingGroup": "UserInput",
+            "devices": []
+        }
+    ]
+}
