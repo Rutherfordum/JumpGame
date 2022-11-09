@@ -33,7 +33,7 @@ public partial class @UserControls : IInputActionCollection2, IDisposable
                     ""id"": ""147c3ecb-c847-4afb-b9f5-6c73357be85a"",
                     ""expectedControlType"": ""Touch"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press(behavior=1)"",
                     ""initialStateCheck"": false
                 },
                 {
