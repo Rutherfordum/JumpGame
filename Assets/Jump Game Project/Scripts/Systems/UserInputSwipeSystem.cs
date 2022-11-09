@@ -65,17 +65,18 @@ namespace Assets.Jump_Game_Project.Scripts.Systemss
 
         private void EndedContact(InputAction.CallbackContext obj)
         {
-            _endedPosition = _inputAction.Playeractionmap.PrimaryPosition.ReadValue<float2>();
-            _endedTime = (float)obj.startTime;
+            _endedPosition = _inputAction.Playeractionmap.PrimaryPosition.ReadValue<Vector2>();
+            _endedTime = (float)obj.time;
             SwipeDetector();
         }
 
         private void SwipeDetector()
         {
-            Debug.Log("Swiped");
             if (_endedTime - _startedTime > _maxTime) return;
             if (math.distance(_startedPosition, _endedPosition) < _minDistance) return;
-            
+
+            Debug.Log("Swiped");
+
             float2 direction = math.normalize(_endedPosition - _startedPosition);
             SwipeDirection(direction);
         }
@@ -88,17 +89,24 @@ namespace Assets.Jump_Game_Project.Scripts.Systemss
                 Debug.Log("Swipe Up");
             }
 
-
             else if (math.dot(new float2(0, -1), direction) > 0.9f)
                 _swipeDown = true;
-
 
             else if (math.dot(new float2(1, 0), direction) > 0.9f)
                 _swipeRight = true;
 
-
             else if (math.dot(new float2(-1, 0), direction) > 0.9f)
                 _swipeLeft = true;
+
+            SwipeReset();
+        }
+
+        private void SwipeReset()
+        {
+            _swipeUp = false;
+            _swipeDown = false;
+            _swipeLeft = false;
+            _swipeRight = false;
         }
     }
 }

@@ -12,8 +12,6 @@ namespace Assets.Jump_Game_Project.Scripts.Components
         [SerializeField][Range(0.1f, 1f)]
         private float _maxTime = 0.5f;
 
-        public bool swipeUp;
-
         public float MaxTime
         {
             get => _maxTime;

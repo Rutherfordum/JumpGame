@@ -29,11 +29,11 @@ public partial class @UserControls : IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""PrimaryContact"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Button"",
                     ""id"": ""147c3ecb-c847-4afb-b9f5-6c73357be85a"",
-                    ""expectedControlType"": ""Touch"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press(behavior=1)"",
+                    ""interactions"": ""Press"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -42,7 +42,7 @@ public partial class @UserControls : IInputActionCollection2, IDisposable
                     ""id"": ""2612092c-ebd2-4a2f-b7b2-81bacbcb9865"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""initialStateCheck"": false
                 }
             ],
@@ -50,7 +50,7 @@ public partial class @UserControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""373ae386-849b-486a-bc36-6622ab54b6ef"",
-                    ""path"": ""<Pointer>/primaryTouch"",
+                    ""path"": ""<Pointer>/press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
